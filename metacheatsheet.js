@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-const sfccSchemas = re
+const sfccSchemas = require('./sfcc-schemas');
+
+(() => {
+    sfccSchemas.metacheatsheet();
+})();
