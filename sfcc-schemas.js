@@ -92,7 +92,11 @@ async function validate(failsonerror) {
         if (!result.valid) {
             log(chalk.redBright(`File ${result.xml} invalid:`));
             result.messages.forEach(i => {
-                log(chalk.redBright('● ' + i));
+                let msg = i;
+                if (msg && msg.indexOf && msg.indexOf('cvc-complex-type') > -1 && msg.indexOf(': ') > -1) {
+                    msg = msg.substr(msg.indexOf(': ') + 2)
+                }
+                log(chalk.redBright(`● ${msg}`));
             });
             if (result.messages.length === 0) {
                 log(chalk.redBright('● ' + JSON.stringify(result)));
@@ -102,7 +106,7 @@ async function validate(failsonerror) {
     });
 
     if (failsonerror && errorcount > 0) {
-        log(chalk.redBright(`${errorcount} xml files failed validation`));
+        log(chalk.redBright(`${errorcount} xml files failed validation\n`));
         process.exit(2); // fail build;
         throw new Error(`${errorcount} xml files failed validation`);
     }
@@ -149,8 +153,10 @@ async function validateXml(xml, xsd) {
         validator.validateXML({ file: xml }, xsd, function (err, result) {
             if (err) {
                 if (result) {
-                    result.messages.push(err);
-                    result.processerror = true;
+                    if (!result.messages || result.messages.length === 0) {
+                        result.messages.push(err);
+                        result.processerror = true;
+                    }
                 } else {
                     log(chalk.red(err));
                     return {};
