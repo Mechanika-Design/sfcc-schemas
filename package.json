@@ -25,7 +25,7 @@
     "cli-progress": "2.1.1",
     "glob": "7.1.4",
     "glob-promise": "3.4.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "moment": "2.24.0",
     "xml2js-es6-promise": "1.1.1",
     "xsd-schema-validator": "0.6.0"
