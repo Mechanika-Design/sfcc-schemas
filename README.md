@@ -38,6 +38,6 @@ For this purpose the module must be installed locally in your project so that xs
 
 ## License
 
-Copyright (c) 2020 Warren Galyen
+Copyright (c) 2020-2021 Warren Galyen
 
 Released under the MIT license.
