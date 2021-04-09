@@ -365,9 +365,14 @@ async function listcontrollers () {
 
 async function metacheatsheet () {
   await buildMeta();
+
   await buildFromXml('sites/site_template/services.xml', 'services.html');
   await buildFromXml('sites/site_template/jobs.xml', 'jobs.html');
+
   await buildSeo('url-rules.xml', 'seo.html');
+
+  await buildFromXml('sites/site_template/pagemetatag.xml', 'pagemetatag.html');
+
   await listcontrollers();
 }
 
