@@ -2,6 +2,9 @@
 
 
 > Salesforce Commerce Cloud import and export schemas validator
+
+![Project Status: WIP](https://img.shields.io/badge/REPO%20STATUS-WIP-orange?style=for-the-badge)
+
 ## Features
 
 * validate salesforce commerce cloud import/export xml files
