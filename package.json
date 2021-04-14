@@ -1,12 +1,7 @@
 {
   "name": "sfcc-schemas",
   "version": "1.2.4",
-  "description": "Salesforce Commerce Cloud import and export schemas validator",
-  "keywords": [
-    "Salesforce Commerce Cloud",
-    "Demandware"
-  ],
-  "main": "sfcc-schemas.js",
+  "description": "Sa5.js",
   "license": "",
   "author": {
     "name": "Warren Galyen"
