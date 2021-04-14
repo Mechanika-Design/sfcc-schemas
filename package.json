@@ -15,10 +15,10 @@
     "sfcc-schemas-metacheatsheet": "metacheatsheet.js"
   },
   "dependencies": {
-    "chalk": "2.4.2",
-    "cli-progress": "2.1.1",
+    "chalk": "4.0.0",
+    "cli-progress": "3.8.0",
     "es6-promise-pool": "2.5.0",
-    "glob": "7.1.4",
+    "glob": "7.1.6",
     "glob-promise": "3.4.0",
     "lodash": "4.17.21",
     "moment": "2.24.0",
@@ -26,5 +26,15 @@
     "xml2js-es6-promise": "1.1.1",
     "xsd-schema-validator": "0.6.0",
     "yargs": "15.3.1"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest": "23.8.2",
+    "eslint-plugin-mocha": "6.3.0",
+    "jest": "25.4.0",
+    "prettier-eslint": "9.0.1"
   }
 }
